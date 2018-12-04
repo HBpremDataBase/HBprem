@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HBprem DataBase</title>
+		<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />	
+		<link type="text/css" href="css/index.css" rel="stylesheet" />	
+		<link type="text/css" href="css/subpageSearch.css" rel="stylesheet"/>
+		<link type="text/css" href="css/media.css" rel="stylesheet"/>
+	</head>
+	<body>
+	<div class="HbDatabase container-fluid">
+		<div class="row">
+			<header>
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+					   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#webNav" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+					    </button>
+					    <div class="logo-search">
+					     
+						  <a class="navbar-brand" href="index.html">
+						  	<img src="img/logo.png" alt="上海儿童医学中心" title="上海儿童医学中心">
+						  	<span>HBprem DataBase</span>
+						  </a>
+						  <form class="navbar-form navbar-left">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="e.g. JAK1">
+							</div>
+							<button type="submit" class="btn btn-default">Search</button>
+						  </form>
+					    </div>
+					</div>
+					<div class="collapse navbar-collapse col-lg-12 col-md-12" id="webNav">
+						<form class="navbar-form navbar-left">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="e.g. JAK1">
+							</div>
+							<button type="submit" class="btn btn-default">Search</button>
+						</form>
+						<div class="nav-wrap">
+						<ul class="nav navbar-nav">
+							<li ><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+							<li><a href="#">Browse</a>
+								<ul class="ul-2">
+									<li><a href="mRnaList.html">mRNA</a></li>
+									<li><a href="m6AList.html">m6A methylated mRNA</a></li>
+									<li><a href="proteinList.html">Protein</a></li>
+									<li><a href="#">phosphorylated Protein</a></li>
+									<li><a href="#">O-GlcNAcylated Protein</a></li>
+								</ul>
+							</li>
+							<li  class="on"><a href="search.html">Search</a></li>
+							<li><a href="#">Download</a></li>
+							<li><a href="#">F&Q</a></li>
+							<li><a href="#">Submission</a></li>
+							<li><a href="#">Help</a></li>
+						</ul>
+						
+						</div>
+					</div>		
+				</nav>
+			</header>
+			<section class="section-4 col-lg-12 col-md-12 col-sm-12">
+				<div class="main-wrap" style="width: 1200px;">
+					<div class="subpageSearch">
+						<div class="search_left">
+							
+							<ul class="search_list">
+								<li class="on">mRNA</li>
+								<li>m6A methylated mRNA</li>
+								<li>Protein</li>
+								<li>Phosphorylated Protein</li>
+								<li>O-GlcNAcylated Protein</li>
+							</ul>
+						</div>
+						<div class="search_right">
+							<div class="search_box">
+								<div class="search_right_requird">
+									<span>Required:</span>
+									<span></span>
+								</div>
+								<form class="form-inline" method="post" action="#">
+									<div class="search_textArea form-group">
+										<label for="search_textArea">Gene symbol:</label>
+										<textarea id="search_textArea" placeholder="e.g.  TRAF3,GAB2,SNX1" class="form-control" name=""></textarea>
+									</div>
+									<div class="search_btn">
+										<button class="btn btn-info submit_btn" type="submit">search</button>
+										<button class="btn btn-info reset_btn" type="reset">reset</button>
+									</div>
+								</form>
+								
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				
+			</section>
+			
+			<footer>
+				<div class="main-wrap">
+					<p>Address：xxx,ShangHai,China.&nbsp;&nbsp;&nbsp;TEL:XXXX-XXXXXXX</p>
+					<p>Copyright © 2018 - 2019 HBprem DataBase. All Rights Reserved.</p>
+				</div>
+			</footer>
+	
+		</div>
+	
+	</div>	
+	
+	
+	
+	
+	
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/subpageSearch.js"></script>
+
+</html>

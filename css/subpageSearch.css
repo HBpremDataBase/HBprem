@@ -1,0 +1,119 @@
+.section-4{
+	overflow: auto;
+	margin-bottom: 1em;
+}
+.subpageSearch{
+	clear: both;
+}
+.subpageSearch>div{
+	display: inline-block;
+	float: left;
+}
+.search_left{
+	width: 250px;
+	margin-right: 20px;
+}
+.search_left ul li{
+	width: inherit;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	text-align: left;
+	text-indent: 10px;
+	color: #269ABC;
+	cursor: pointer;
+	background: rgb(246,245,246);
+	border-left: 4px solid rgb(204,204,204);
+}
+.search_left ul li.on{
+	background: rgb(225,235,242);
+	border-left:4px solid rgb(69,49,100);
+}
+.search_right{
+	width: 930px;
+}
+.search_right .search_box{
+	border: 1px solid #eee;
+	border-radius: 2px;
+	padding: 0px 15px 5px 15px;	
+}
+.search_box .search_right_requird{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #eee;
+}
+.search_box .search_right_requird span{
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+}
+.search_box .search_textArea{
+	width: 100%;
+	padding: 15px 0;	
+	border-bottom: 1px solid #eee;
+}
+.search_box .search_textArea label{
+	width: 200px;
+	height: 150px;
+	font-size: 20px;
+	text-align: right;
+	vertical-align: top;
+}
+.search_box .search_textArea textarea{
+	width: 500px;
+	height: 150px;
+	resize: none;
+}
+.search_box .search_btn{
+	padding: 10px 0;
+	text-align: center;
+}
+.search_box .search_btn button:first-child{
+	margin-right: 50px;
+}
+.search_box .search_btn button{
+	width: 110px;
+	height: 35px;
+	background: rgb(55,123,181);
+}
+@media screen and (min-width: 1260px){
+	footer .main-wrap {
+    width: 1200px;
+	}
+}
+@media screen and (max-width: 767px){
+	.section-4{
+		width: calc(100%-30px);
+		margin: 0 auto;
+	}
+	.section-4 .main-wrap{
+		width: 100% !important;
+	}
+	.subpageSearch>div{
+		display: block;
+		float: none;
+	}
+	.subpageSearch>div.search_left{
+		width: 100%;
+		margin-right: 0;
+	}
+	.subpageSearch>div.search_right{
+		width: 100%;
+	}
+	.search_box .search_textArea {
+		overflow: hidden;
+	}
+	.search_box .search_textArea label{
+		width: initial;
+		height: initial;
+		padding: 5px;
+		display: inline-block;
+		float: left;
+	}
+	.search_box .search_textArea textarea{
+		width: 100%;
+		display: inline-block;
+		float: left;
+	}
+	
+}

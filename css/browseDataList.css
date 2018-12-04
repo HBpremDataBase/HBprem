@@ -1,0 +1,230 @@
+.section-3{
+	overflow: auto;
+	margin-bottom: 1em;
+}
+.search-form{
+/* 	margin-top: 30px; */
+}
+#proteinListForm input{
+	padding-left: 5px;
+}
+.search-condition-1{
+	height: 40px;
+	font-size: 18px;
+	line-height: 40px;
+}
+ .search-condition-1>div{
+	display: inline-block;
+	float: left;
+	margin-right: 50px;
+}
+.perCount span{
+	display: inline-block;
+    float: left;
+}
+ .search-condition-1 .jumpPage input{
+	height: 25px;
+	width: 55px;
+	float: left;
+    display: inline-block;
+    margin: 7px;
+}
+ .search-condition-1 .jumpPage a{
+    float: left;
+    display: inline-block;
+}
+ .search-condition-1 select{
+	padding: 0;
+	width: initial;
+	height: 25px;
+	padding: 0;
+    margin: 7px;
+	float: left;
+    display: inline-block;
+}
+ .list-title{
+	padding: 2px 0;
+	overflow: hidden;
+	color: #fff;
+	background: rgb(55,123,181);
+	font-weight: bold;
+}
+ .list-title ul li{
+	display: inline-block;
+	float: left;
+	font-size: 18px;
+	text-align: center;
+	margin:0 5px;
+	line-height: 40px;
+	white-space: nowrap;
+}
+ .list-title ul li span{
+	display: block;
+	line-height: 27px;
+}
+ .width-1,
+ .width-1{
+	width: 50px;
+}
+.width-1 span{
+	display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    background: rgb(68,157,67);
+    width: 18px;
+    height: 19px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+#proteinListForm .width-2{
+	width: 85px;
+}
+#proteinListForm .width-3{
+	width: 85px;
+}
+#proteinListForm .width-4{
+	width: 85px;
+}
+#proteinListForm .width-5{
+	width: 85px;
+}
+#proteinListForm .width-6{
+	width: 370px;
+}
+#proteinListForm .width-7{
+	width: 370px;
+}
+#mRnaListForm .width-2{
+	width: 120px;
+}
+#mRnaListForm .width-3{
+	width: 120px;
+}
+#mRnaListForm .width-4{
+	width: 365px;
+}
+#mRnaListForm .width-5{
+	width: 365px;
+}
+#mRnaListForm .width-6{
+	width: 120px;
+}
+#m6AListForm .width-2{
+	width: 120px;
+}
+#m6AListForm .width-3{
+	width: 120px;
+}
+#m6AListForm .width-4{
+	width: 365px;
+}
+#m6AListForm .width-5{
+	width: 365px;
+}
+#m6AListForm .width-6{
+	width: 120px;
+}
+
+
+.form-inline  .search-condition-2{
+	overflow: hidden;
+	margin: 10px 0;
+}
+.form-inline  .search-condition-2 .form-group{
+	margin: 0 5px;
+	float: left;
+}
+.form-inline  .search-condition-2 button{
+	width: inherit;
+	height: 33px;
+}
+.form-inline .search-condition-2 input{
+	width: inherit;
+}
+.form-inline  .result-ans{
+	margin-top: 5px;
+}
+.form-inline  .result-ans table tr{
+	height: 39px;
+	line-height: 39px;
+	border-top: 1px solid #ccc;
+}
+.form-inline  .result-ans table tr:nth-child(even){
+	background: #D9EDF7;
+}
+.form-inline .result-ans table tr:last-child{
+	border-bottom:1px solid #ccc ;
+}
+.form-inline  .result-ans table tr td{
+	text-align: center;
+	float: left;
+	display: inline-block;
+	margin: 0 5px;
+}
+ .search-nav{
+	overflow: hidden;
+	margin-top: 20px;
+}
+ .search-nav nav{
+	background: none;
+	width: 295px;
+	min-width: 295px;
+	height: auto;
+	float: left;
+	display: inline-block;
+	
+}
+ .search-nav nav ul{
+	margin: 0;
+}
+ .search-nav nav ul li a.on{
+	background: rgb(55,123,181);
+	color: #fff;
+}
+ .search-nav>div{
+	float: right;
+	display: inline-block;
+}
+ .search-condition-1>div:last-child{
+	margin-right: 0;
+}
+@media screen and (min-width:1260px){
+	footer{
+		width: 100%;
+		overflow: hidden;
+	}
+	footer .main-wrap{
+		width: 1200px;
+	}
+}
+.modal-body table{
+	width: 100%;
+}
+.modal-body table .quantification>div,
+.modal-body table .locus>div{
+	width: 12.5%;
+	display: inline-block;
+	float: left;
+}
+.modal-body table .locus>div{
+	width: 30%;
+}
+.modal-body table .quantification>div span,
+.modal-body table .locus>div span{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+}
+.modal-body table tr{
+	border-bottom: 1px solid #ccc;
+}
+.modal-body table tr td:first-child{
+	font-weight: bold;
+}
+.modal-body table tr td{
+	text-align: center;
+	height: 40px;
+}
+
+

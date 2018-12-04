@@ -1,0 +1,9 @@
+@media (max-width:955px) {
+	
+}
+@media (max-width:767px) {
+	.navbar-form .form-group{
+		width: calc(100% - 75px);
+		display: inline-block;
+	}
+}

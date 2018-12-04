@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HBprem DataBase</title>
+		<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />	
+		<link type="text/css" href="css/index.css" rel="stylesheet" />	
+		<link type="text/css" href="css/browseDataList.css" rel="stylesheet"/>
+		<link type="text/css" href="css/media.css" rel="stylesheet"/>
+	</head>
+	<body>
+	<div class="HbDatabase container-fluid">
+		<div class="row">
+			<header>
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+					   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#webNav" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+					    </button>
+					    <div class="logo-search">
+					     
+						  <a class="navbar-brand" href="index.html">
+						  	<img src="img/logo.png" alt="上海儿童医学中心" title="上海儿童医学中心">
+						  	<span>HBprem DataBase</span>
+						  </a>
+						  <form class="navbar-form navbar-left">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="e.g. JAK1">
+							</div>
+							<button type="submit" class="btn btn-default">Search</button>
+						  </form>
+					    </div>
+					</div>
+					<div class="collapse navbar-collapse col-lg-12 col-md-12" id="webNav">
+						<form class="navbar-form navbar-left">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="e.g. JAK1">
+							</div>
+							<button type="submit" class="btn btn-default">Search</button>
+						</form>
+						<div class="nav-wrap">
+						<ul class="nav navbar-nav">
+							<li ><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+							<li class="on"><a href="#">Browse</a>
+								<ul class="ul-2">
+									<li><a href="mRnaList.html">mRNA</a></li>
+									<li><a href="m6AList.html">m6A methylated mRNA</a></li>
+									<li><a href="proteinList.html">Protein</a></li>
+									<li><a href="#">phosphorylated Protein</a></li>
+									<li><a href="#">O-GlcNAcylated Protein</a></li>
+								</ul>
+							</li>
+							<li><a href="search.html">Search</a></li>
+							<li><a href="#">Download</a></li>
+							<li><a href="#">F&Q</a></li>
+							<li><a href="#">Submission</a></li>
+							<li><a href="#">Help</a></li>
+						</ul>
+						
+						</div>
+					</div>		
+				</nav>
+			</header>
+			<section class="section-3 col-lg-12 col-md-12 col-sm-12">
+				<div class="main-wrap" style="width: 1200px;">
+					<div class="search-form">
+						<form class="form-inline" id="proteinListForm"  metdod="post">
+							
+							<div class="list-title">
+								<ul>
+									<li class="width-1">Detail</li>
+									<li class="width-2">Uniprot</li>
+									<li class="width-3">Gene</span></li>
+									<li class="width-4">Position</li>
+									<li class="width-5">Amino acid</li>
+									<li class="width-6">Modified sequence</li>
+									<li class="width-7">Method</li>
+								</ul>
+							</div>
+						
+							<div class="search-condition-2">
+								<div  class="form-group width-1">  
+									<button id="searchBtn" class="glyphicon glyphicon-search form-control"></button>
+								</div>
+								<div class="form-group width-2">
+									<input class="proteinAccess form-control" name="proteinAccess" />
+								</div>
+								<div class="form-group width-3">
+									<input class="geneName  form-control" name="geneName" />
+								</div>
+								<div class="form-group width-4">
+									<input class="position form-control" name="position" />
+								</div>
+								<div class="form-group width-5">
+									<input class="aminoAcid form-control" name="aminoAcid" />
+								</div>
+								<div class="form-group width-6">
+									<input class="modifSequen form-control" name="modifSequen" />
+								</div>
+								<div class="form-group width-7">
+									<input class="method form-control" name="method" />
+								</div>
+								
+							</div>
+						
+							<div class="result-ans">
+								<table class="">
+									<tr>
+										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-2">Q16851</td>
+										<td class="width-3">UGP2</td>
+										<td class="width-4">435</td>
+										<td class="width-5">S</td>
+										<td class="width-6">LGS(0.121)S(0.879)FTK</td>
+										<td class="width-7">Tandem Mass Tag-LC-MS/MS</td>
+										<td class="td-detail hidden">
+											<div class="quantification">
+												<span class="N1">1.11</span>
+												<span class="T1">2.11</span>
+												<span class="N2">3.11</span>
+												<span class="T2">4.11</span>
+												<span class="N3">5.11</span>
+												<span class="T3">6.11</span>
+												<span class="N4">7.11</span>
+												<span class="T4">8.11</span>
+											</div>
+											<div class="log2Ratio">-3.251538767</div>
+											<div class="pValue">3.46E-03</div>
+											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="enrichMethod">TiO2</div>
+											<div class="massSpectrometer">Orbitrap Fusion (ThermoFisher Scientific. San Jose. CA)</div>
+											<div class="hcdMassSpectra"></div>
+										</td>
+									</tr>
+									<tr>
+										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-2">Q16851</td>
+										<td class="width-3">UGP2</td>
+										<td class="width-4">435</td>
+										<td class="width-5">S</td>
+										<td class="width-6">LGS(0.121)S(0.879)FTK</td>
+										<td class="width-7">Tandem Mass Tag-LC-MS/MS</td>
+										<td class="td-detail hidden">
+											<div class="quantification">
+												<span class="N1">1.21</span>
+												<span class="T1">2.21</span>
+												<span class="N2">3.21</span>
+												<span class="T2">4.21</span>
+												<span class="N3">5.21</span>
+												<span class="T3">6.21</span>
+												<span class="N4">7.21</span>
+												<span class="T4">8.21</span>
+											</div>
+											<div class="log2Ratio">-3.123456</div>
+											<div class="pValue">4.56E-03</div>
+											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="enrichMethod">TiO2</div>
+											<div class="massSpectrometer">Orbitrap Fusion (ThermoFisher Scientific. San Jose. CA)</div>
+											<div class="hcdMassSpectra">
+												<img src="#" />
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-2">Q16851</td>
+										<td class="width-3">UGP2</td>
+										<td class="width-4">435</td>
+										<td class="width-5">S</td>
+										<td class="width-6">LGS(0.121)S(0.879)FTK</td>
+										<td class="width-7">Tandem Mass Tag-LC-MS/MS</td>
+										<td class="td-detail hidden">
+											<div class="quantification">
+												<span class="N1">1.11</span>
+												<span class="T1">2.11</span>
+												<span class="N2">3.11</span>
+												<span class="T2">4.11</span>
+												<span class="N3">5.11</span>
+												<span class="T3">6.11</span>
+												<span class="N4">7.11</span>
+												<span class="T4">8.11</span>
+											</div>
+											<div class="log2Ratio">-3.251538767</div>
+											<div class="pValue">3.46E-03</div>
+											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="enrichMethod">TiO2</div>
+											<div class="massSpectrometer">Orbitrap Fusion (ThermoFisher Scientific. San Jose. CA)</div>
+											<div class="hcdMassSpectra"></div>
+										</td>
+									</tr>
+									<tr>
+										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-2">Q16851</td>
+										<td class="width-3">UGP2</td>
+										<td class="width-4">435</td>
+										<td class="width-5">S</td>
+										<td class="width-6">LGS(0.121)S(0.879)FTK</td>
+										<td class="width-7">Tandem Mass Tag-LC-MS/MS</td>
+										<td class="td-detail hidden">
+											<div class="quantification">
+												<span class="N1">1.11</span>
+												<span class="T1">2.11</span>
+												<span class="N2">3.11</span>
+												<span class="T2">4.11</span>
+												<span class="N3">5.11</span>
+												<span class="T3">6.11</span>
+												<span class="N4">7.11</span>
+												<span class="T4">8.11</span>
+											</div>
+											<div class="log2Ratio">-3.251538767</div>
+											<div class="pValue">3.46E-03</div>
+											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="enrichMethod">TiO2</div>
+											<div class="massSpectrometer">Orbitrap Fusion (ThermoFisher Scientific. San Jose. CA)</div>
+											<div class="hcdMassSpectra"></div>
+										</td>
+									</tr>
+									<tr>
+										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-2">Q16851</td>
+										<td class="width-3">UGP2</td>
+										<td class="width-4">435</td>
+										<td class="width-5">S</td>
+										<td class="width-6">LGS(0.121)S(0.879)FTK</td>
+										<td class="width-7">Tandem Mass Tag-LC-MS/MS</td>
+										<td class="td-detail hidden">
+											<div class="quantification">
+												<span class="N1">1.11</span>
+												<span class="T1">2.11</span>
+												<span class="N2">3.11</span>
+												<span class="T2">4.11</span>
+												<span class="N3">5.11</span>
+												<span class="T3">6.11</span>
+												<span class="N4">7.11</span>
+												<span class="T4">8.11</span>
+											</div>
+											<div class="log2Ratio">-3.251538767</div>
+											<div class="pValue">3.46E-03</div>
+											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="enrichMethod">TiO2</div>
+											<div class="massSpectrometer">Orbitrap Fusion (ThermoFisher Scientific. San Jose. CA)</div>
+											<div class="hcdMassSpectra"></div>
+										</td>
+									</tr>
+									<tr>
+										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-2">Q16851</td>
+										<td class="width-3">UGP2</td>
+										<td class="width-4">435</td>
+										<td class="width-5">S</td>
+										<td class="width-6">LGS(0.121)S(0.879)FTK</td>
+										<td class="width-7">Tandem Mass Tag-LC-MS/MS</td>
+										<td class="td-detail hidden">
+											<div class="quantification">
+												<span class="N1">1.11</span>
+												<span class="T1">2.11</span>
+												<span class="N2">3.11</span>
+												<span class="T2">4.11</span>
+												<span class="N3">5.11</span>
+												<span class="T3">6.11</span>
+												<span class="N4">7.11</span>
+												<span class="T4">8.11</span>
+											</div>
+											<div class="log2Ratio">-3.251538767</div>
+											<div class="pValue">3.46E-03</div>
+											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="enrichMethod">TiO2</div>
+											<div class="massSpectrometer">Orbitrap Fusion (ThermoFisher Scientific. San Jose. CA)</div>
+											<div class="hcdMassSpectra"></div>
+										</td>
+									</tr>
+									<tr>
+										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-2">Q16851</td>
+										<td class="width-3">UGP2</td>
+										<td class="width-4">435</td>
+										<td class="width-5">S</td>
+										<td class="width-6">LGS(0.121)S(0.879)FTK</td>
+										<td class="width-7">Tandem Mass Tag-LC-MS/MS</td>
+										<td class="td-detail hidden">
+											<div class="quantification">
+												<span class="N1">1.11</span>
+												<span class="T1">2.11</span>
+												<span class="N2">3.11</span>
+												<span class="T2">4.11</span>
+												<span class="N3">5.11</span>
+												<span class="T3">6.11</span>
+												<span class="N4">7.11</span>
+												<span class="T4">8.11</span>
+											</div>
+											<div class="log2Ratio">-3.251538767</div>
+											<div class="pValue">3.46E-03</div>
+											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="enrichMethod">TiO2</div>
+											<div class="massSpectrometer">Orbitrap Fusion (ThermoFisher Scientific. San Jose. CA)</div>
+											<div class="hcdMassSpectra"></div>
+										</td>
+									</tr>
+									<tr>
+										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-2">Q16851</td>
+										<td class="width-3">UGP2</td>
+										<td class="width-4">435</td>
+										<td class="width-5">S</td>
+										<td class="width-6">LGS(0.121)S(0.879)FTK</td>
+										<td class="width-7">Tandem Mass Tag-LC-MS/MS</td>
+										<td class="td-detail hidden">
+											<div class="quantification">
+												<span class="N1">1.11</span>
+												<span class="T1">2.11</span>
+												<span class="N2">3.11</span>
+												<span class="T2">4.11</span>
+												<span class="N3">5.11</span>
+												<span class="T3">6.11</span>
+												<span class="N4">7.11</span>
+												<span class="T4">8.11</span>
+											</div>
+											<div class="log2Ratio">-3.251538767</div>
+											<div class="pValue">3.46E-03</div>
+											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="enrichMethod">TiO2</div>
+											<div class="massSpectrometer">Orbitrap Fusion (ThermoFisher Scientific. San Jose. CA)</div>
+											<div class="hcdMassSpectra"></div>
+										</td>
+									</tr>
+									<tr>
+										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-2">Q16851</td>
+										<td class="width-3">UGP2</td>
+										<td class="width-4">435</td>
+										<td class="width-5">S</td>
+										<td class="width-6">LGS(0.121)S(0.879)FTK</td>
+										<td class="width-7">Tandem Mass Tag-LC-MS/MS</td>
+										<td class="td-detail hidden">
+											<div class="quantification">
+												<span class="N1">1.11</span>
+												<span class="T1">2.11</span>
+												<span class="N2">3.11</span>
+												<span class="T2">4.11</span>
+												<span class="N3">5.11</span>
+												<span class="T3">6.11</span>
+												<span class="N4">7.11</span>
+												<span class="T4">8.11</span>
+											</div>
+											<div class="log2Ratio">-3.251538767</div>
+											<div class="pValue">3.46E-03</div>
+											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="enrichMethod">TiO2</div>
+											<div class="massSpectrometer">Orbitrap Fusion (ThermoFisher Scientific. San Jose. CA)</div>
+											<div class="hcdMassSpectra"></div>
+										</td>
+									</tr>
+									<tr>
+										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-2">Q16851</td>
+										<td class="width-3">UGP2</td>
+										<td class="width-4">435</td>
+										<td class="width-5">S</td>
+										<td class="width-6">LGS(0.121)S(0.879)FTK</td>
+										<td class="width-7">Tandem Mass Tag-LC-MS/MS</td>
+										<td class="td-detail hidden">
+											<div class="quantification">
+												<span class="N1">1.11</span>
+												<span class="T1">2.11</span>
+												<span class="N2">3.11</span>
+												<span class="T2">4.11</span>
+												<span class="N3">5.11</span>
+												<span class="T3">6.11</span>
+												<span class="N4">7.11</span>
+												<span class="T4">8.11</span>
+											</div>
+											<div class="log2Ratio">-3.251538767</div>
+											<div class="pValue">3.46E-03</div>
+											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="enrichMethod">TiO2</div>
+											<div class="massSpectrometer">Orbitrap Fusion (ThermoFisher Scientific. San Jose. CA)</div>
+											<div class="hcdMassSpectra"></div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="search-nav">
+								<nav aria-label="Page navigation">
+									<ul class="pagination">
+									<li class="prevPage">
+										<a href="#" aria-label="Previous">
+										<span aria-hidden="true">&laquo;</span>
+										</a>
+									</li>
+									<li class="aNumber"><a href="#" class="on">1</a></li>
+									<li class="aNumber"><a href="#">2</a></li>
+									<li class="aNumber"><a href="#">3</a></li>
+									<li class="aNumber"><a href="#">4</a></li>
+									<li class="aNumber"><a href="#">5</a></li>
+									<li class="aNumber"><a href="#">6</a></li>
+									<li class="aNumber"><a href="#">7</a></li>
+									<li class="nextPage">
+										<a href="#" aria-label="Next">
+										<span aria-hidden="true">&raquo;</span>
+										</a>
+									</li>
+									</ul>
+								</nav>
+								
+								<div class="search-condition-1">
+									<div class="perCount">
+										<span>Showing</span>
+										<select class="entriesNum form-control" name="entriesNum">
+											<option selected="selected">10</option>
+											<option >20</option>
+											<option >30</option>
+										</select>
+										<span>entries per page</span>
+									</div>
+									<div class="totalCount">
+										Total
+										<span class="totalNum">666</span>
+										entries
+									</div>
+									<div class="pageState">
+										page
+										<span class="curPage">1</span>
+										/
+										<span class="totalPage">7</span>								
+									</div>
+									<div class="jumpPage">
+										<input name="pageNum" class="form-control" />
+										<a href="#" class="jumpBtn">Jump To</a>																
+									</div>
+								</div>
+								
+							</div>
+							
+							
+						</form>		
+					</div>												
+					
+				</div>
+				
+				
+			</section>
+			
+			<footer>
+				<div class="main-wrap">
+					<p>Address：xxx,ShangHai,China.&nbsp;&nbsp;&nbsp;TEL:XXXX-XXXXXXX</p>
+					<p>Copyright © 2018 - 2019 HBprem DataBase. All Rights Reserved.</p>
+				</div>
+			</footer>
+	
+		</div>
+	
+	</div>	
+	
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Gene:XXXXX</h4>
+	      </div>
+	      <div class="modal-body">
+	        <table>
+	        	<tr>
+	        		<td>Quantification</td>
+	        		<td class="quantification">
+	        			<div class="">
+	        				<span class="top_name">N1</span>
+	        				<span class="N1"></span>
+	        			</div>
+	        			<div class="">
+	        				<span class="top_name">T1</span>
+	        				<span class="T1"></span>
+	        			</div>
+	        			<div class="">
+	        				<span class="top_name">N2</span>
+	        				<span class="N2"></span>
+	        			</div>
+	        			<div class="">
+	        				<span class="top_name">T2</span>
+	        				<span class="T2"></span>
+	        			</div>
+	        			<div class="">
+	        				<span class="top_name">N3</span>
+	        				<span class="N3"></span>
+	        			</div>
+	        			<div class="">
+	        				<span class="top_name">T3</span>
+	        				<span class="T3"></span>
+	        			</div>
+	        			<div class="">
+	        				<span class="top_name">N4</span>
+	        				<span class="N4"></span>
+	        			</div>
+	        			<div class="">
+	        				<span class="top_name">T4</span>
+	        				<span class="T4"></span>
+	        			</div>
+	        		</td>
+	        	</tr>
+	        	<tr>
+	        		<td>T/N Log2 Ratio</td>
+	        		<td class="log2Ratio"></td>
+	        	</tr>
+	        	<tr>
+	        		<td>P value</td>
+	        		<td class="pValue"></td>
+	        	</tr>
+	        	<tr>
+	        		<td>Source</td>
+	        		<td class="source"></td>
+	        	</tr>
+	        	<tr>
+	        		<td>Enrichment method</td>
+	        		<td class="enrichMethod"></td>
+	        	</tr>
+	        	<tr>
+	        		<td>Mass spectrometer</td>
+	        		<td class="massSpectrometer"></td>
+	        	</tr>
+	        	<tr>
+	        		<td>HCD mass spectra</td>
+	        		<td class="hcdMassSpectra"></td>
+	        	</tr>
+	        </table>
+	        
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>	       
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	
+	
+	
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript" src="js/loadProteinDetails.js"></script>
+</html>
