@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" >
@@ -6,8 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>HBprem DataBase</title>
 		<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />	
-		<link type="text/css" href="css/index.css" rel="stylesheet" />	
-		<link type="text/css" href="css/media.css" rel="stylesheet"/>
+		<link type="text/css" href="css/index.css" rel="stylesheet" />
+		<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+		<link type="text/css" href="css/media.css" rel="stylesheet"/>		
 	</head>
 	<body>
 	<div class="HbDatabase container-fluid">
@@ -24,24 +25,33 @@
 					    <div class="logo-search">
 					     
 						  <a class="navbar-brand" href="index.html">
-						  	<img src="img/logo.png" alt="上海儿童医学中心" title="上海儿童医学中心">
+						  	<div class="img"></div>
+						  	<!--<img src="img/logo.png" alt="上海儿童医学中心" title="上海儿童医学中心">-->
 						  	<span>HBprem DataBase</span>
 						  </a>
-						  <form class="navbar-form navbar-left">
+						  <form class="navbar-form navbar-left topSearch">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="e.g. JAK1">
+								<input type="text" class="form-control topSearchInput" placeholder="">
 							</div>
-							<button type="submit" class="btn btn-default">Search</button>
+							<button type="submit" class="btn ">Search</button>
+							<div class="auto-menu">
+								<ul>
+									<li>111222333</li>
+									<li>111222333</li>
+									<li>111222333</li>
+									<li>111222333</li>
+								</ul>
+							</div>
 						  </form>
 					    </div>
 					</div>
 					<div class="collapse navbar-collapse col-lg-12 col-md-12" id="webNav">
-						<form class="navbar-form navbar-left">
+						<!--<form class="navbar-form navbar-left">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="e.g. JAK1">
 							</div>
-							<button type="submit" class="btn btn-default">Search</button>
-						</form>
+							<button type="submit" class="btn ">Search</button>
+						</form>-->
 						<div class="nav-wrap">
 						<ul class="nav navbar-nav">
 							<li class="on"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
@@ -50,7 +60,7 @@
 									<li><a href="mRnaList.html">mRNA</a></li>
 									<li><a href="m6AList.html">m6A methylated mRNA</a></li>
 									<li><a href="proteinList.html">Protein</a></li>
-									<li><a href="#">phosphorylated Protein</a></li>
+									<li><a href="#">Phosphorylated Protein</a></li>
 									<li><a href="#">O-GlcNAcylated Protein</a></li>
 								</ul>
 							</li>
@@ -138,53 +148,67 @@
 			</section>
 			<section class="section-2">
 				<div class="main-wrap">
-					<div class="main-left">
-							<div class="small-box bg-aqua">
-								<div class="inner">
-									<h3>18888</h3>
-									<p>Medical Data Records</p>
-								</div>
-								<div class="icon">
-									<img src="img/icon_records.png" />
-								</div>
-								<a href="#" class="small-box-footer">
-									More info ++
-								</a>
-							</div>
+					<div class="jumpToSection">
+						<form action="#" class="" method="post">
+							<!-- <div class="form-group">
+								<span>
+									<input class="form-control" placeholder="Search a gene/transcript, eg. gene123456.78" />
+								</span>
+								<span>
+									<button class="btn btn-info" value="Search">Search</button>
+								</span>
+							</div> 
+							<p>Jump to section for this gene/transcript</p>
+							-->
+
+							<ul>
+								<li>
+									<img src="img/Aliases.png" />
+									<br />
+									Aliases
+								</li>
+								<li>
+									<img src="img/general.png" />
+									<br />
+									General
+								</li>
+								<li>
+									<img src="img/expres.png" />
+									<br />
+									Expression
+								</li>
+								<li>
+									<img src="img/orthologs.jpg" />
+									<br />
+									Orthologs 
+								</li>
+								<li>
+									<img src="img/function.png" />
+									<br />
+									Function
+								</li>
+								<li>
+									<img src="img/disease.jpg" />
+									<br />
+									Disease relation
+								</li>
+								
+								
+								
+							</ul>
+							
+							
+							
+						</form>
+						
+						
 						
 					</div>
-					<div class="main-center">
-						
-						<div class="small-box bg-aqua">
-							<div class="inner">
-								<h3>12%</h3>
-								<p>Incidence of Anemia</p>
-							</div>
-							<div class="icon">
-								<img src="img/icon_rate.png" />
-							</div>
-							<a href="#" class="small-box-footer">
-								More info ++
-							</a>
-						</div>
-						
-					</div>
-					<div class="main-right">
-						
-						<div class="small-box bg-aqua">
-							<div class="inner">
-								<h3>666</h3>
-								<p>Visitors To This Site</p>
-							</div>
-							<div class="icon">
-								<img src="img/icon_visitors.png" />
-							</div>
-							<a href="#" class="small-box-footer">
-								More info ++
-							</a>
-						</div>
-						
-					</div>				
+					
+					
+					
+					
+					
 				</div>
 			</section>
 			
@@ -205,6 +229,7 @@
 	</body>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	
 </html>

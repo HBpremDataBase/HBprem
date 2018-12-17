@@ -25,24 +25,25 @@
 					    <div class="logo-search">
 					     
 						  <a class="navbar-brand" href="index.html">
-						  	<img src="img/logo.png" alt="上海儿童医学中心" title="上海儿童医学中心">
+						  	<div class="img"></div>
+						  	<!--<img src="img/logo.png" alt="上海儿童医学中心" title="上海儿童医学中心">-->
 						  	<span>HBprem DataBase</span>
 						  </a>
-						  <form class="navbar-form navbar-left">
+						  <!--<form class="navbar-form navbar-left">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="e.g. JAK1">
 							</div>
-							<button type="submit" class="btn btn-default">Search</button>
-						  </form>
+							<button type="submit" class="btn ">Search</button>
+						  </form>-->
 					    </div>
 					</div>
 					<div class="collapse navbar-collapse col-lg-12 col-md-12" id="webNav">
-						<form class="navbar-form navbar-left">
+						<!--<form class="navbar-form navbar-left">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="e.g. JAK1">
 							</div>
-							<button type="submit" class="btn btn-default">Search</button>
-						</form>
+							<button type="submit" class="btn">Search</button>
+						</form>-->
 						<div class="nav-wrap">
 						<ul class="nav navbar-nav">
 							<li ><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
@@ -68,6 +69,32 @@
 			</header>
 			<section class="section-3 col-lg-12 col-md-12 col-sm-12">
 				<div class="main-wrap" style="width: 1200px;">
+					<div class="search-condition-1">
+						<div class="perCount">
+							<span>Showing</span>
+							<select class="entriesNum form-control" name="entriesNum">
+								<option selected="selected">10</option>
+								<option >20</option>
+								<option >30</option>
+							</select>
+							<span>entries per page</span>
+						</div>
+						<div class="totalCount">
+							Total
+							<span class="totalNum">666</span>
+							entries
+						</div>
+						<div class="pageState">
+							page
+							<span class="curPage">1</span>
+							/
+							<span class="totalPage">7</span>								
+						</div>
+						<div class="jumpPage">
+							<input name="pageNum" class="form-control" />
+							<a href="#" class="jumpBtn">Jump To</a>																
+						</div>
+					</div>
 					<div class="search-form">
 						<form class="form-inline" id="mRnaListForm"  metdod="post">
 							
@@ -106,256 +133,255 @@
 							<div class="result-ans">
 								<table class="">
 									<tr>
-										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-1"><span class="glyphicon glyphicon-plus"></span></td>
 										<td class="width-2">geneName1</td>
 										<td class="width-3">geneID_1</td>
 										<td class="width-4">ENSG00000100601</td>
 										<td class="width-5">protein_coding</td>
 										<td class="width-6">+</td>
-										<td class="td-detail hidden">
+										<td class="td-detail">
 											<div class="quantification">
-												<span class="N1">1.11</span>
-												<span class="T1">2.11</span>
-												<span class="N2">3.11</span>
-												<span class="T2">4.11</span>
-												<span class="N3">5.11</span>
-												<span class="T3">6.11</span>
-												<span class="N4">7.11</span>
-												<span class="T4">8.11</span>
+												<div class="detail-left">
+													Quantification
+												</div>
+												<div class="detail-right">
+													<div class="detail-span">
+														<div class="span-key">N1</div>
+														<div class="span-value">1.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">T1</div>
+														<div class="span-value">2.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">N2</div>
+														<div class="span-value">3.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">T2</div>
+														<div class="span-value">4.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">N3</div>
+														<div class="span-value">5.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">T3</div>
+														<div class="span-value">6.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">N4</div>
+														<div class="span-value">7.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">T4</div>
+														<div class="span-value">8.11</div>
+													</div>
+												</div>												
 											</div>
-											<div class="log2Ratio">-3.251538767</div>
-											<div class="pValue">3.46E-03</div>
-											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="log2Ratio">
+												<div class="detail-left">
+													T/N Log2 Ratio
+												</div>
+												<div class="detail-right">
+													-3.251538767
+												</div>																						
+											</div>
+											<div class="pValue">
+												<div class="detail-left">
+													P value
+												</div>
+												<div class="detail-right">
+													3.46E-03
+												</div>
+												
+											</div>
+											<div class="source">
+												<div class="detail-left">
+													Source
+												</div>
+												<div class="detail-right">
+													J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)
+												</div>												
+											</div>
 											<div class="locus">
-												<span class="chrom">chr1</span>
-												<span class="txStart">16857</span>
-												<span class="txEnd">35736</span>
+												<div class="detail-left">
+													Locus
+												</div>
+												<div class="detail-right">
+													<div class="detail-span">
+														<div class="span-key">chrom</div>
+														<div class="span-value">chr1</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">txStart</div>
+														<div class="span-value">16857</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">txEnd</div>
+														<div class="span-value">35736</div>
+													</div>												
+												</div>
+												
 											</div>
 										</td>
 									</tr>
 									<tr>
-										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-1" ><span class="glyphicon glyphicon-plus"></span></td>
 										<td class="width-2">geneName2</td>
 										<td class="width-3">geneID_2</td>
 										<td class="width-4">ENSG00000100601</td>
 										<td class="width-5">protein_coding</td>
 										<td class="width-6">+</td>
-										<td class="td-detail hidden">
+										<td class="td-detail">
 											<div class="quantification">
-												<span class="N1">1.11</span>
-												<span class="T1">2.11</span>
-												<span class="N2">3.11</span>
-												<span class="T2">4.11</span>
-												<span class="N3">5.11</span>
-												<span class="T3">6.11</span>
-												<span class="N4">7.11</span>
-												<span class="T4">8.11</span>
+												<div class="detail-left">
+													Quantification
+												</div>
+												<div class="detail-right">
+													<div class="detail-span">
+														<div class="span-key">N1</div>
+														<div class="span-value">1.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">T1</div>
+														<div class="span-value">2.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">N2</div>
+														<div class="span-value">3.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">T2</div>
+														<div class="span-value">4.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">N3</div>
+														<div class="span-value">5.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">T3</div>
+														<div class="span-value">6.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">N4</div>
+														<div class="span-value">7.11</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">T4</div>
+														<div class="span-value">8.11</div>
+													</div>
+												</div>												
 											</div>
-											<div class="log2Ratio">-3.251538767</div>
-											<div class="pValue">3.46E-03</div>
-											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
+											<div class="log2Ratio">
+												<div class="detail-left">
+													T/N Log2 Ratio
+												</div>
+												<div class="detail-right">
+													-3.251538767
+												</div>																						
+											</div>
+											<div class="pValue">
+												<div class="detail-left">
+													P value
+												</div>
+												<div class="detail-right">
+													3.46E-03
+												</div>
+												
+											</div>
+											<div class="source">
+												<div class="detail-left">
+													Source
+												</div>
+												<div class="detail-right">
+													J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)
+												</div>												
+											</div>
 											<div class="locus">
-												<span class="chrom">chr1</span>
-												<span class="txStart">16857</span>
-												<span class="txEnd">35736</span>
+												<div class="detail-left">
+													Locus
+												</div>
+												<div class="detail-right">
+													<div class="detail-span">
+														<div class="span-key">chrom</div>
+														<div class="span-value">chr1</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">txStart</div>
+														<div class="span-value">16857</div>
+													</div>
+													<div class="detail-span">
+														<div class="span-key">txEnd</div>
+														<div class="span-value">35736</div>
+													</div>												
+												</div>
+												
 											</div>
 										</td>
 									</tr>
 									<tr>
-										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-1"><span class="glyphicon glyphicon-plus"></span></td>
 										<td class="width-2">geneName3</td>
 										<td class="width-3">geneID_3</td>
 										<td class="width-4">ENSG00000100601</td>
 										<td class="width-5">protein_coding</td>
 										<td class="width-6">+</td>
-										<td class="td-detail hidden">
-											<div class="quantification">
-												<span class="N1">1.11</span>
-												<span class="T1">2.11</span>
-												<span class="N2">3.11</span>
-												<span class="T2">4.11</span>
-												<span class="N3">5.11</span>
-												<span class="T3">6.11</span>
-												<span class="N4">7.11</span>
-												<span class="T4">8.11</span>
-											</div>
-											<div class="log2Ratio">-3.251538767</div>
-											<div class="pValue">3.46E-03</div>
-											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
-											<div class="locus">
-												<span class="chrom">chr1</span>
-												<span class="txStart">16857</span>
-												<span class="txEnd">35736</span>
-											</div>
-										</td>
+										
 									</tr>
 									<tr>
-										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-1"><span class="glyphicon glyphicon-plus"></span></td>
 										<td class="width-2">geneName4</td>
 										<td class="width-3">geneID_4</td>
 										<td class="width-4">ENSG00000100601</td>
 										<td class="width-5">protein_coding</td>
 										<td class="width-6">+</td>
-										<td class="td-detail hidden">
-											<div class="quantification">
-												<span class="N1">1.11</span>
-												<span class="T1">2.11</span>
-												<span class="N2">3.11</span>
-												<span class="T2">4.11</span>
-												<span class="N3">5.11</span>
-												<span class="T3">6.11</span>
-												<span class="N4">7.11</span>
-												<span class="T4">8.11</span>
-											</div>
-											<div class="log2Ratio">-3.251538767</div>
-											<div class="pValue">3.46E-03</div>
-											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
-											<div class="locus">
-												<span class="chrom">chr1</span>
-												<span class="txStart">16857</span>
-												<span class="txEnd">35736</span>
-											</div>
-										</td>
+										
 									</tr>
 									<tr>
-										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-1"><span class="glyphicon glyphicon-plus"></span></td>
 										<td class="width-2">geneName5</td>
 										<td class="width-3">geneID_5</td>
 										<td class="width-4">ENSG00000100601</td>
 										<td class="width-5">protein_coding</td>
 										<td class="width-6">+</td>
-										<td class="td-detail hidden">
-											<div class="quantification">
-												<span class="N1">1.11</span>
-												<span class="T1">2.11</span>
-												<span class="N2">3.11</span>
-												<span class="T2">4.11</span>
-												<span class="N3">5.11</span>
-												<span class="T3">6.11</span>
-												<span class="N4">7.11</span>
-												<span class="T4">8.11</span>
-											</div>
-											<div class="log2Ratio">-3.251538767</div>
-											<div class="pValue">3.46E-03</div>
-											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
-											<div class="locus">
-												<span class="chrom">chr1</span>
-												<span class="txStart">16857</span>
-												<span class="txEnd">35736</span>
-											</div>
-										</td>
+										
 									</tr>
 									<tr>
-										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-1" ><span class="glyphicon glyphicon-plus"></span></td>
 										<td class="width-2">geneName6</td>
 										<td class="width-3">geneID_6</td>
 										<td class="width-4">ENSG00000100601</td>
 										<td class="width-5">protein_coding</td>
 										<td class="width-6">+</td>
-										<td class="td-detail hidden">
-											<div class="quantification">
-												<span class="N1">1.11</span>
-												<span class="T1">2.11</span>
-												<span class="N2">3.11</span>
-												<span class="T2">4.11</span>
-												<span class="N3">5.11</span>
-												<span class="T3">6.11</span>
-												<span class="N4">7.11</span>
-												<span class="T4">8.11</span>
-											</div>
-											<div class="log2Ratio">-3.251538767</div>
-											<div class="pValue">3.46E-03</div>
-											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
-											<div class="locus">
-												<span class="chrom">chr1</span>
-												<span class="txStart">16857</span>
-												<span class="txEnd">35736</span>
-											</div>
-										</td>
+										
 									</tr>
 									<tr>
-										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-1" ><span class="glyphicon glyphicon-plus"></span></td>
 										<td class="width-2">geneName7</td>
 										<td class="width-3">geneID_8</td>
 										<td class="width-4">ENSG00000100601</td>
 										<td class="width-5">protein_coding</td>
 										<td class="width-6">+</td>
-										<td class="td-detail hidden">
-											<div class="quantification">
-												<span class="N1">1.11</span>
-												<span class="T1">2.11</span>
-												<span class="N2">3.11</span>
-												<span class="T2">4.11</span>
-												<span class="N3">5.11</span>
-												<span class="T3">6.11</span>
-												<span class="N4">7.11</span>
-												<span class="T4">8.11</span>
-											</div>
-											<div class="log2Ratio">-3.251538767</div>
-											<div class="pValue">3.46E-03</div>
-											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
-											<div class="locus">
-												<span class="chrom">chr1</span>
-												<span class="txStart">16857</span>
-												<span class="txEnd">35736</span>
-											</div>
-										</td>
+										
 									</tr>
 									<tr>
-										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-1" ><span class="glyphicon glyphicon-plus"></span></td>
 										<td class="width-2">geneName9</td>
 										<td class="width-3">geneID_9</td>
 										<td class="width-4">ENSG00000100601</td>
 										<td class="width-5">protein_coding</td>
 										<td class="width-6">+</td>
-										<td class="td-detail hidden">
-											<div class="quantification">
-												<span class="N1">1.11</span>
-												<span class="T1">2.11</span>
-												<span class="N2">3.11</span>
-												<span class="T2">4.11</span>
-												<span class="N3">5.11</span>
-												<span class="T3">6.11</span>
-												<span class="N4">7.11</span>
-												<span class="T4">8.11</span>
-											</div>
-											<div class="log2Ratio">-3.251538767</div>
-											<div class="pValue">3.46E-03</div>
-											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
-											<div class="locus">
-												<span class="chrom">chr1</span>
-												<span class="txStart">16857</span>
-												<span class="txEnd">35736</span>
-											</div>
-										</td>
+										
 									</tr>
 									<tr>
-										<td class="width-1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></td>
+										<td class="width-1" ><span class="glyphicon glyphicon-plus"></span></td>
 										<td class="width-2">geneName10</td>
 										<td class="width-3">geneID_10</td>
 										<td class="width-4">ENSG00000100601</td>
 										<td class="width-5">protein_coding</td>
 										<td class="width-6">+</td>
-										<td class="td-detail hidden">
-											<div class="quantification">
-												<span class="N1">1.11</span>
-												<span class="T1">2.11</span>
-												<span class="N2">3.11</span>
-												<span class="T2">4.11</span>
-												<span class="N3">5.11</span>
-												<span class="T3">6.11</span>
-												<span class="N4">7.11</span>
-												<span class="T4">8.11</span>
-											</div>
-											<div class="log2Ratio">-3.251538767</div>
-											<div class="pValue">3.46E-03</div>
-											<div class="source">J Protecme Res.2015.Oct 2;14(10):4246-56.(PMID:26265067)</div>
-											<div class="locus">
-												<span class="chrom">chr1</span>
-												<span class="txStart">16857</span>
-												<span class="txEnd">35736</span>
-											</div>
-										</td>
+										
 									</tr>
 									
 									
@@ -384,32 +410,7 @@
 									</ul>
 								</nav>
 								
-								<div class="search-condition-1">
-									<div class="perCount">
-										<span>Showing</span>
-										<select class="entriesNum form-control" name="entriesNum">
-											<option selected="selected">10</option>
-											<option >20</option>
-											<option >30</option>
-										</select>
-										<span>entries per page</span>
-									</div>
-									<div class="totalCount">
-										Total
-										<span class="totalNum">666</span>
-										entries
-									</div>
-									<div class="pageState">
-										page
-										<span class="curPage">1</span>
-										/
-										<span class="totalPage">7</span>								
-									</div>
-									<div class="jumpPage">
-										<input name="pageNum" class="form-control" />
-										<a href="#" class="jumpBtn">Jump To</a>																
-									</div>
-								</div>
+								
 								
 							</div>
 							
@@ -433,90 +434,7 @@
 	
 	</div>	
 	
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title">Gene:XXXXX</h4>
-	      </div>
-	      <div class="modal-body">
-	        <table>
-	        	<tr>
-	        		<td>Quantification</td>
-	        		<td class="quantification">
-	        			<div class="">
-	        				<span class="top_name">N1</span>
-	        				<span class="N1"></span>
-	        			</div>
-	        			<div class="">
-	        				<span class="top_name">T1</span>
-	        				<span class="T1"></span>
-	        			</div>
-	        			<div class="">
-	        				<span class="top_name">N2</span>
-	        				<span class="N2"></span>
-	        			</div>
-	        			<div class="">
-	        				<span class="top_name">T2</span>
-	        				<span class="T2"></span>
-	        			</div>
-	        			<div class="">
-	        				<span class="top_name">N3</span>
-	        				<span class="N3"></span>
-	        			</div>
-	        			<div class="">
-	        				<span class="top_name">T3</span>
-	        				<span class="T3"></span>
-	        			</div>
-	        			<div class="">
-	        				<span class="top_name">N4</span>
-	        				<span class="N4"></span>
-	        			</div>
-	        			<div class="">
-	        				<span class="top_name">T4</span>
-	        				<span class="T4"></span>
-	        			</div>
-	        		</td>
-	        	</tr>
-	        	<tr>
-	        		<td>T/N Log2 Ratio</td>
-	        		<td class="log2Ratio"></td>
-	        	</tr>
-	        	<tr>
-	        		<td>P value</td>
-	        		<td class="pValue"></td>
-	        	</tr>
-	        	<tr>
-	        		<td>Source</td>
-	        		<td class="source"></td>
-	        	</tr>
-	        	<tr>
-	        		<td>Locus</td>
-	        		<td class="locus">
-	        			<div class="">
-	        				<span class="top_name">chrom</span>
-	        				<span class="chrom"></span>
-	        			</div>
-	        			<div class="">
-	        				<span class="top_name">txStart</span>
-	        				<span class="txStart"></span>
-	        			</div>
-	        			<div class="">
-	        				<span class="top_name">txEnd</span>
-	        				<span class="txEnd"></span>
-	        			</div>
-	        		</td>
-	        	</tr>
-	        </table>
-	        
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>	       
-	      </div>
-	    </div>
-	  </div>
-	</div>
+	
 
 	
 	

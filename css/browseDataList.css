@@ -6,12 +6,14 @@
 /* 	margin-top: 30px; */
 }
 #proteinListForm input{
+	padding: 0;
 	padding-left: 5px;
 }
 .search-condition-1{
 	height: 40px;
 	font-size: 18px;
 	line-height: 40px;
+	margin-bottom: 10px;
 }
  .search-condition-1>div{
 	display: inline-block;
@@ -54,7 +56,7 @@
 	float: left;
 	font-size: 18px;
 	text-align: center;
-	margin:0 5px;
+	margin-left:5px;
 	line-height: 40px;
 	white-space: nowrap;
 }
@@ -71,34 +73,47 @@
     color: #fff;
     cursor: pointer;
     background: rgb(68,157,67);
-    width: 18px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
     padding-top: 2px;
     padding-left: 2px;
 }
 #proteinListForm .width-2{
-	width: 85px;
+	width: 80px;
 }
 #proteinListForm .width-3{
-	width: 85px;
+	width: 80px;
 }
 #proteinListForm .width-4{
-	width: 85px;
+	width: 70px;
 }
 #proteinListForm .width-5{
-	width: 85px;
+	width: 65px;
 }
 #proteinListForm .width-6{
-	width: 370px;
+	width: 205px;
 }
 #proteinListForm .width-7{
-	width: 370px;
+	width: 205px;
 }
+#proteinListForm .width-8{
+	width: 205px;
+}
+#proteinListForm .width-9{
+	width:90px ;
+}
+#proteinListForm .width-10{
+	width: 90px;
+}
+
+
 #mRnaListForm .width-2{
-	width: 120px;
+	width: 165px;
 }
 #mRnaListForm .width-3{
-	width: 120px;
+	width: 165px;
 }
 #mRnaListForm .width-4{
 	width: 365px;
@@ -107,7 +122,8 @@
 	width: 365px;
 }
 #mRnaListForm .width-6{
-	width: 120px;
+	width: 55px;
+	
 }
 #m6AListForm .width-2{
 	width: 120px;
@@ -122,7 +138,7 @@
 	width: 365px;
 }
 #m6AListForm .width-6{
-	width: 120px;
+	width: 150px;
 }
 
 
@@ -131,7 +147,7 @@
 	margin: 10px 0;
 }
 .form-inline  .search-condition-2 .form-group{
-	margin: 0 5px;
+	margin-left: 5px;
 	float: left;
 }
 .form-inline  .search-condition-2 button{
@@ -157,10 +173,80 @@
 }
 .form-inline  .result-ans table tr td{
 	text-align: center;
-	float: left;
 	display: inline-block;
-	margin: 0 5px;
+	float: left;
+	height: inherit;
+	cursor: pointer;
+	margin-left:5px;
+	font-size: 18px;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
+.form-inline  .result-ans table tr td:hover{
+	text-decoration: underline;
+	-webkit-text-decoration-color: rgb(55,123,181);
+	-o-text-decoration-color: rgb(55,123,181);
+	-moz-text-decoration-color: rgb(55,123,181);
+	text-decoration-color: rgb(55,123,181);
+}
+.form-inline .result-ans table tr td.td-detail{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	display: none;
+	margin: 0;
+}
+.result-ans tr td.td-detail>div{
+	clear: both;
+}
+.result-ans tr td.td-detail>div{
+	border-bottom: 1px solid #ccc;
+}
+.result-ans tr td.td-detail>div>div{
+	display: inline-block;
+	float: left;
+}
+.result-ans tr td.td-detail>div>div.detail-left{
+	width: 150px;
+	text-align:left;
+	text-indent: 20px;
+	font-weight: bold;
+}
+.result-ans tr td.td-detail>div.quantification .detail-left,
+.result-ans tr td.td-detail>div.locus .detail-left{
+	line-height: 82px;
+}
+.result-ans tr td.td-detail>div>div.detail-right{
+	width: 1050px;
+}
+.result-ans tr td.td-detail>div>div.detail-right .detail-span{
+	width: 12.45%;
+	display: inline-block;
+	float: left;
+}
+.result-ans tr td.td-detail>div>div.detail-right .detail-span>div{
+	height: 40px;
+}
+.result-ans tr td.td-detail>div>div.detail-right .detail-span .span-key{
+	background: #5BC0DE;
+	border-right: 1px solid #fff;
+	color: #fff;
+	margin-top:2px;
+}
+.result-ans tr td.td-detail>div.hcdMassSpectra img{
+	margin: 10px 0;
+}
+/*提示化工具*/
+.tooltip.top .tooltip-arrow{
+	border-top-color:rgb(55,123,181) ;
+}
+.tooltip-inner{
+	max-width: 250px;
+	font-size: 16px;
+	background-color: rgb(55,123,181);
+}
+
  .search-nav{
 	overflow: hidden;
 	margin-top: 20px;
@@ -197,7 +283,7 @@
 		width: 1200px;
 	}
 }
-.modal-body table{
+/*.modal-body table{
 	width: 100%;
 }
 .modal-body table .quantification>div,
@@ -225,6 +311,6 @@
 .modal-body table tr td{
 	text-align: center;
 	height: 40px;
-}
+}*/
 
 

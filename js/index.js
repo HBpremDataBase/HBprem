@@ -26,6 +26,18 @@ $(document).ready(function(){
 	});
 	
 
+	//自动化提示
+	$(".topSearchInput").autocomplete({  
+            source: ["A1BG","A1BG-AS1","A1CF","A2M","A2M-AS1","A2ML1","A2ML1-AS1"]
+ 	})
+ 	
+ 	/*该方法是再拼接div内容时加上的，即鼠标选中的时候，input框输入选中值  */
+ 	function select(localName){
+	 		$(".topSearchInput").val(localName);
+	 		$(".auto-menu").hide();
+	 }
+
+	
 	
 	
 });

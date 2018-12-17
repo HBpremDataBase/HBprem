@@ -84,6 +84,33 @@ $(document).ready(function(){
 	});
 	
 	
+	//点击加号，显示记录的详细信息
+	$(".result-ans .width-1 span").click(function(){
+		var td_details = $(this).parent().siblings(".td-detail");
+		var all_w1_spans = $(".result-ans .width-1 span");
+		var all_details = $(".result-ans td.td-detail");
+		if(td_details.hasClass("on")){//本来是显示的,现在要隐藏
+			$(this).removeClass("glyphicon-minus").addClass("glyphicon-plus").css("background","gray");
+			$(this).css("background","rgb(68,157,67)");
+			td_details.removeClass("on");
+			td_details.slideUp(500);			
+		}else{//本来是隐藏的，现在要显示					
+			//隐藏其他所有
+			all_details.slideUp(500);
+			all_details.removeClass("on");
+			all_w1_spans.removeClass("glyphicon-minus").addClass("glyphicon-plus").css("background","rgb(68,157,67)");
+			//只显示当前
+			$(this).removeClass("glyphicon-plus").addClass("glyphicon-minus");
+			$(this).css("background","gray");
+			td_details.addClass("on");
+			td_details.slideDown(500);			
+		}
+	});
+	 $('[data-toggle="tooltip"]').tooltip({
+	 	title:function(){
+	 		return $(this).text();
+	 	}
+	 });
 	
 	
 	
